@@ -1,7 +1,7 @@
 {
-  "id": "TinyMCE (v2)",
-  "name": "TinyMCE (v2)",
-  "src": "https://contentful.tiny.cloud/",
+  "id": "TinyMCE+ref",
+  "name": "TinyMCE + refs",
+  "src": "https://some.s3.domain/src/index.html",
   "fieldTypes": ["Text"],
   "parameters": {
     "installation": [
@@ -46,6 +46,22 @@
           "default": "edit view insert format",
           "required": false,
           "description": "Specify the menus to display here. To use the default menu bar, clear this field. To hide the menu, enter the value 'false'. See https://www.tiny.cloud/docs/configure/editor-appearance/#menubar"
+      },
+      {
+          "id": "contentTypes",
+          "name": "Content types",
+          "type": "Symbol",
+          "default": "page,article",
+          "required": false,
+          "description": "Comma separated list of contentful types allowed for entry links."
+      },
+      {
+          "id": "titleProperty",
+          "name": "Title property",
+          "type": "Symbol",
+          "default": "title,slug",
+          "required": false,
+          "description": "Comma separated list of properties used for link title. First found is used."
       }
     ]
   }
